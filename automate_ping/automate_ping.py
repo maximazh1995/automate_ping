@@ -43,9 +43,9 @@ def main(target_ip,package_size):
                 time.sleep(interval)
                 bar.update(i)
 
-        print(f"Среднее за {number_of_attempts} попыток(ки) успешных пингов = {numpy.mean(success) * 100 / package_count}%")
-
-        logger.info(f"Среднее за {number_of_attempts} попыток(ки) успешных пингов = {numpy.mean(success) * 100 / package_count}%")
+        message_info = f"Среднее за {number_of_attempts} попыток(ки) успешных пингов = {numpy.mean(success) * 100 / package_count}%"
+        print(message_info)
+        logger.info(message_info)
         logger.info(f"Скрипт завершен!")
 
     except Exception as Argument:
